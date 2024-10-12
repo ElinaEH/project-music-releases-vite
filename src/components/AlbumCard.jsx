@@ -1,9 +1,10 @@
+/* eslint-disable react/prop-types */
 import AlbumCover from "./AlbumCover";
 import AlbumName from "./AlbumName";
 import ArtistName from "./ArtistName";
-import heartIcon from '../assets/icons/heart.svg';
-import playIcon from '../assets/icons/play.svg';
-import dotsIcon from '../assets/icons/dots.svg';
+import heartIcon from "../assets/icons/heart.svg";
+import playIcon from "../assets/icons/play.svg";
+import dotsIcon from "../assets/icons/dots.svg";
 
 const AlbumCard = ({ album }) => {
   return (

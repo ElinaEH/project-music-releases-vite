@@ -16,7 +16,8 @@
   transition: opacity 0.3s ease; /* Only opacity changes on hover */
 }
 
-.album-card:hover .album-image-container img {
+/* Darken the album cover and show icons only when hovering on the image */
+.album-image-container:hover img {
   opacity: 0.5; /* Darken the album cover on hover */
 }
 
@@ -49,7 +50,8 @@
   transition: opacity 0.3s ease;
 }
 
-.album-card:hover .overlay-icons {
+/* Show icons only when hovering over the album image */
+.album-image-container:hover .overlay-icons {
   opacity: 1; /* Show icons on hover */
 }
 
@@ -64,24 +66,26 @@
 }
 
 .icon img {
-  width: 30px;
-  height: 30px;
-  filter: brightness(0) invert(1); /* Keeps the icons white by default */
+  width: 40px; /* Increased from 30px to 40px */
+  height: 40px; /* Increased from 30px to 40px */
+  filter: brightness(0.8) invert(1); /* Slightly dimmer white by default */
+  transition: filter 0.3s ease; /* Add transition for smooth effect */
 }
 
 .icon:hover img {
-  filter: brightness(3) invert(1); /* Brightens the icons on hover */
+  filter: brightness(1.5) invert(1); /* Significantly brighter on hover */
+  opacity: 100%;
 }
 
 /* Play icon grows on hover */
 .play-icon {
   transition: transform 0.3s ease, filter 0.3s ease;
-  filter: brightness(150%);
+  filter: brightness(0.8); /* Slightly dimmer by default */
 }
 
 .play-icon:hover {
-  transform: scale(1.5); /* Grows on hover */
-  filter: brightness(5); /* Becomes brighter on hover */
+  transform: scale(1.8); /* Increased from 1.5 to 1.8 for a larger hover effect */
+  filter: brightness(1.5); /* Becomes brighter on hover */
 }
 
 /* Album name styling */
@@ -127,7 +131,7 @@ body {
   padding: 50px;
 }
 
-/* Media queries for responsiveness */
+/* Media queries */
 
 /* 4 albums per row on desktop (1200px and above) */
 @media (min-width: 1200px) {
