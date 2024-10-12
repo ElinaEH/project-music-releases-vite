@@ -54,33 +54,34 @@
 }
 
 .icon {
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-size: 30px; /* Increase from 20px to 30px */
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    padding: 10px; /* Add some padding for a larger clickable area */
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  padding: 10px; /* Add some padding for a larger clickable area */
 }
 
 .icon img {
-    width: 30px;
-    height: 30px;
-    filter: brightness(0) invert(1); /* Keeps the icons white by default */
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(1); /* Keeps the icons white by default */
 }
 
 .icon:hover img {
-    filter: brightness(3) invert(1); /* Brightens the icons on hover */
+  filter: brightness(3) invert(1); /* Brightens the icons on hover */
 }
 
 /* Play icon grows on hover */
 .play-icon {
   transition: transform 0.3s ease, filter 0.3s ease;
+  filter: brightness(150%);
 }
 
 .play-icon:hover {
-  transform: scale(1.3); /* Grows on hover */
-  filter: brightness(4); /* Becomes brighter on hover */
+  transform: scale(1.5); /* Grows on hover */
+  filter: brightness(5); /* Becomes brighter on hover */
 }
 
 /* Album name styling */
@@ -124,4 +125,27 @@ body {
   background-color: #181818;
   font-family: 'Arial', sans-serif;
   padding: 50px;
+}
+
+/* Media queries for responsiveness */
+
+/* 4 albums per row on desktop (1200px and above) */
+@media (min-width: 1200px) {
+  .album-card {
+    width: calc(25% - 30px); /* 25% width per album minus the gap */
+  }
+}
+
+/* 2 albums per row on tablets (between 768px and 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .album-card {
+    width: calc(50% - 30px); /* 50% width per album minus the gap */
+  }
+}
+
+/* 1 album per row on mobile (below 768px) */
+@media (max-width: 767px) {
+  .album-card {
+    width: 100%; /* Full width for each album */
+  }
 }
