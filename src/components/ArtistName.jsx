@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 const ArtistName = ({ name, url, isLast }) => {
   return (
     <>
