@@ -10,4 +10,5 @@ const ArtistName = ({ name, url, isLast }) => {
   );
 };
 
+// Export the ArtistName component
 export default ArtistName;

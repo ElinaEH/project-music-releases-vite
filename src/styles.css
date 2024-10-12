@@ -1,4 +1,9 @@
-/* General album card styles */
+body {
+  background-color: #181818;
+  font-family: 'Arial', sans-serif;
+  padding: 50px;
+}
+
 .album-card {
   position: relative;
   width: 300px;
@@ -13,10 +18,9 @@
 
 .album-image-container img {
   width: 100%;
-  transition: opacity 0.3s ease; /* Only opacity changes on hover */
+  transition: opacity 0.3s ease; 
 }
 
-/* Darken the album cover and show icons only when hovering on the image */
 .album-image-container:hover img {
   opacity: 0.5; /* Darken the album cover on hover */
 }
@@ -31,7 +35,6 @@
 }
 
 .album-name:hover {
-  color: white;
   text-decoration: underline;
 }
 
@@ -59,15 +62,13 @@
   background-color: transparent;
   border: none;
   color: white;
-  font-size: 30px;
   cursor: pointer;
   transition: transform 0.3s ease;
-  padding: 10px; /* Add some padding for a larger clickable area */
 }
 
 .icon img {
-  width: 40px; /* Increased from 30px to 40px */
-  height: 40px; /* Increased from 30px to 40px */
+  width: 40px; 
+  height: 40px; 
   filter: brightness(0.8) invert(1); /* Slightly dimmer white by default */
   transition: filter 0.3s ease; /* Add transition for smooth effect */
 }
@@ -80,7 +81,7 @@
 /* Play icon grows on hover */
 .play-icon {
   transition: transform 0.3s ease, filter 0.3s ease;
-  filter: brightness(0.8); /* Slightly dimmer by default */
+  filter: brightness(0.8);
 }
 
 .play-icon:hover {
@@ -97,7 +98,6 @@
 }
 
 .album-name:hover {
-  color: white;
   text-decoration: underline;
 }
 
@@ -113,7 +113,6 @@
 }
 
 .artist-name:hover {
-  color: white;
   text-decoration: underline;
 }
 
@@ -125,29 +124,23 @@
   justify-content: center;
 }
 
-body {
-  background-color: #181818;
-  font-family: 'Arial', sans-serif;
-  padding: 50px;
-}
-
 /* Media queries */
 
-/* 4 albums per row on desktop (1200px and above) */
+/* desktop, 4 albums per row */
 @media (min-width: 1200px) {
   .album-card {
     width: calc(25% - 30px); /* 25% width per album minus the gap */
   }
 }
 
-/* 2 albums per row on tablets (between 768px and 1199px) */
+/* tablet, 2 albums per row */
 @media (min-width: 768px) and (max-width: 1199px) {
   .album-card {
     width: calc(50% - 30px); /* 50% width per album minus the gap */
   }
 }
 
-/* 1 album per row on mobile (below 768px) */
+/* mobile, 1 album per row */
 @media (max-width: 767px) {
   .album-card {
     width: 100%; /* Full width for each album */

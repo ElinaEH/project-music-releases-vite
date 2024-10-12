@@ -1,4 +1,6 @@
 /* eslint-disable react/prop-types */
+
+// Import components and assets
 import AlbumCover from "./AlbumCover";
 import AlbumName from "./AlbumName";
 import ArtistName from "./ArtistName";
@@ -38,4 +40,5 @@ const AlbumCard = ({ album }) => {
   );
 };
 
+// Export the AlbumCard component
 export default AlbumCard;

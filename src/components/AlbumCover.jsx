@@ -7,4 +7,5 @@ const AlbumCover = ({ coverUrl }) => {
   );
 };
 
+// Export the AlbumCover component 
 export default AlbumCover;

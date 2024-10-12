@@ -7,4 +7,5 @@ const AlbumName = ({ name, url }) => {
   );
 };
 
+// Export the AlbumName component
 export default AlbumName;

@@ -1,6 +1,8 @@
+// Import album data from the JSON file
 import data from "./data.json";
+// Import the AlbumCard component to display individual albums
 import AlbumCard from "./components/AlbumCard";
-// IMPORT HEADER HERE
+// Import CSS styles for the application
 import "./styles.css";  
 import "./index.css";
 
